@@ -21,6 +21,7 @@ Added
 - both the date and the time at which a model was trained are now included in the policy's metadata when it is persisted
 - option for end-to-end evaluation of Rasa Core and NLU examples in
   ``evaluate.py`` script
+- docker-compose file to start a rasa core server together with nlu, an action server, and duckling
 
 
 Changed
@@ -28,6 +29,9 @@ Changed
 - improved response format for ``/predict`` endpoint
 - all error messages from the server are now in json format
 - ``agent.log_message`` now returns a tracker instead of the trackers state
+- the core container does not load the nlu model by default anymore.
+  Instead it can be connected to a nlu server.
+
 
 Removed
 -------
